@@ -1,12 +1,71 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, SafeAreaView, Image, Pressable } from 'react-native'
 import React from 'react'
+
+import { Link } from 'expo-router'
 
 export default function Home() {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView style={styles.container} >
+      <Image source={require("../../assets/Welcome.png")} style={styles.imgHome} />
+      <View style={styles.txtContainer} >
+        <Text style={styles.txtTitle} >Seja bem-vindo!</Text>
+        <Text style={styles.txt} >
+          Nosso app possui uma tela de funcionalidades principal, a Add. Nela você consegue
+          adicionar, remover e listar items de compra, vamos testar?
+        </Text>
+      </View>
+
+      <Link href="/Add" asChild>
+        <Pressable style={styles.pressable} >
+          <Text style={styles.txtPressable} >Vamos lá</Text>
+        </Pressable>
+      </Link>
+    </SafeAreaView>
   )
 }
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    alignItems: "center",
+    justifyContent: "center",
+    backgroundColor: "white"
+  },
+  txtContainer: {
+    marginTop: 20,
+    alignItems: "center",
+    marginBottom: 50,
+    width: "100%",
+  },
+  imgHome: {
+    width: "100%",
+    height: "50%",
+    resizeMode: "contain"
+  },
+  txtTitle: {
+    fontSize: 24,
+    fontFamily: "Inter_700Bold",
+    marginBottom: 10
+  },
+  txt: {
+    fontSize: 16,
+    fontFamily: "Inter_400Regular",
+    textAlign: "center",
+    width: "85%"
+  },
+  pressable: {
+    backgroundColor: '#BA68C8',
+    padding: 10,
+    borderRadius: 5,
+    marginTop: 20,
+    width: "50%",
+    height: "6%",
+  },
+  txtPressable: {
+    color: "white",
+    textAlign: "center",
+    fontWeight: "bold",
+    fontSize: 14,
+    fontFamily: "Inter_400Regular"
+  }
+})
