@@ -6,6 +6,7 @@ import React from 'react'
 import { useState } from 'react'
 import { useEffect } from 'react'
 import { Button } from '../../components/Button'
+import  Products   from '../../components/Products'
 
 export default function Add() {
 
@@ -63,12 +64,16 @@ export default function Add() {
 
       <Button title="Adicionar" onPress={salvarItem} />
 
-      <View>
-        <Text>Itens</Text>
+      <View style={styles.header} >
+        <Text style={styles.headerTitle} >Itens</Text>
       </View>
 
       <ScrollView>
-
+        <Products 
+        name={nomeItem}
+        preco={precoItem}
+        
+        />
       </ScrollView>
 
     </View>
@@ -97,6 +102,24 @@ const styles = StyleSheet.create({
     padding: 16,
     fontSize: 16,
     borderColor: "#BA68C8",
+  },
+  items: {
+    gap: 12,
+  },
+  scroll: {
+    borderTopWidth: 1,
+    borderTopColor: "#999",
+    paddingTop: 24,
+  },
+  header: {
+    marginTop: 32,
+    width: '100%',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center'
+  },
+  headerTitle: {
+    fontSize: 16,
+    fontWeight: '500'
   }
-
 })
