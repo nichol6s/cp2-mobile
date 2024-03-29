@@ -24,14 +24,14 @@ export default function TabsLayout() {
                 tabBarStyle:{backgroundColor: "#222831"},
                 tabBarActiveTintColor: "#EEEEEE"
             }}/>
-            <Tabs.Screen name="Add" options={{
+            <Tabs.Screen name="add" options={{
                 headerTitle: "Lista de compras",
                 title: "Add",
                 tabBarIcon: ({color})=> <Feather name="plus" size={22} color={color} />,
                 tabBarStyle:{backgroundColor: "#222831"},
                 tabBarActiveTintColor: "#EEEEEE"
             }}/>
-            <Tabs.Screen name="User" options={{
+            <Tabs.Screen name="user" options={{
                 headerTitle: "User Page",
                 title: "User",
                 tabBarIcon: ({color})=> <Feather name="user" size={22} color={color} />,

@@ -18,7 +18,7 @@ export default function Home() {
         </Text>
       </View>
 
-      <Link href="/Add" asChild>
+      <Link href="/add" asChild>
         <Pressable style={styles.pressable} >
           <Text style={styles.txtPressable} >Vamos lá</Text>
         </Pressable>
