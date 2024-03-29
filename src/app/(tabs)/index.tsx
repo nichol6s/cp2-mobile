@@ -3,9 +3,12 @@ import React from 'react'
 
 import { Link } from 'expo-router'
 
+import { StatusBar } from 'expo-status-bar'
+
 export default function Home() {
   return (
     <SafeAreaView style={styles.container} >
+      <StatusBar style="light" />
       <Image source={require("../../assets/Welcome.png")} style={styles.imgHome} />
       <View style={styles.txtContainer} >
         <Text style={styles.txtTitle} >Seja bem-vindo!</Text>
@@ -29,7 +32,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
-    backgroundColor: "white"
+    backgroundColor: "#222831"
   },
   txtContainer: {
     marginTop: 20,
@@ -45,16 +48,18 @@ const styles = StyleSheet.create({
   txtTitle: {
     fontSize: 24,
     fontFamily: "Inter_700Bold",
-    marginBottom: 10
+    marginBottom: 10,
+    color: "#EEEEEE"
   },
   txt: {
     fontSize: 16,
     fontFamily: "Inter_400Regular",
     textAlign: "center",
-    width: "85%"
+    width: "85%",
+    color: "#EEEEEE"
   },
   pressable: {
-    backgroundColor: '#BA68C8',
+    backgroundColor: '#31363F',
     padding: 10,
     borderRadius: 5,
     marginTop: 20,
@@ -66,6 +71,6 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
     fontSize: 14,
-    fontFamily: "Inter_400Regular"
+    fontFamily: "Inter_400Regular",
   }
 })

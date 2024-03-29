@@ -4,7 +4,13 @@ import { Feather, FontAwesome } from "@expo/vector-icons"
 
 import React from 'react'
 
-export default function Products({nomeItem, precoItem, excluirItem}) {
+interface ProductsProps{
+  nomeItem: string;
+  precoItem: string;
+  excluirItem: ()=> void;
+}
+
+export default function Products({nomeItem, precoItem, excluirItem}: ProductsProps) {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -12,7 +18,7 @@ export default function Products({nomeItem, precoItem, excluirItem}) {
                     {nomeItem}
                 </Text>
                 <Text style={styles.preco}>
-                    <FontAwesome name="dollar" size={16} color="green" /> {precoItem}
+                    <FontAwesome name="dollar" size={16} color="#76ABAE" /> {precoItem}
                 </Text>
             </View>
 
@@ -32,7 +38,7 @@ export const styles = StyleSheet.create({
       width: '100%',
       flexDirection: 'row',
       alignItems: 'center',
-      backgroundColor: "#CECECE",
+      backgroundColor: "#31363F",
       borderRadius: 7,
       padding: 16
     },
@@ -42,10 +48,11 @@ export const styles = StyleSheet.create({
     name: {
       fontSize: 16,
       fontWeight: '500',
-      marginBottom: 5
+      marginBottom: 5,
+      color: "#EEEEEE"
     },
     preco: {
       fontSize: 14,
-      color: "#777",
+      color: "#EEEEEE",
     }
   });

@@ -20,12 +20,12 @@ export const styles = StyleSheet.create({
     height: 56,
     width: '100%',
     borderRadius: 7,
-    backgroundColor: "#BA68C8",
+    backgroundColor: "#31363F",
     justifyContent: 'center',
     alignItems: 'center'
   },
   title: {
     fontSize: 16,
-    color: "#FFF"
+    color: "#EEEEEE"
   }
 });
