@@ -59,18 +59,18 @@ const styles = StyleSheet.create({
     color: "#EEEEEE"
   },
   pressable: {
-    backgroundColor: '#31363F',
-    padding: 10,
-    borderRadius: 5,
-    marginTop: 20,
-    width: "50%",
-    height: "6%",
+    height: 56,
+    width: '65%',
+    borderRadius: 7,
+    backgroundColor: "#31363F",
+    justifyContent: 'center',
+    alignItems: 'center'
   },
   txtPressable: {
     color: "white",
     textAlign: "center",
     fontWeight: "bold",
-    fontSize: 14,
+    fontSize: 16,
     fontFamily: "Inter_400Regular",
   }
 })

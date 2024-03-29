@@ -1,6 +1,8 @@
 import { StyleSheet, Text, View, Image } from 'react-native'
 import React from 'react'
+
 import { Avatar, AvatarImage } from '../../components/Avatar'
+import { Toast } from '../../components/Toast'
 
 export default function User() {
   return (
@@ -17,9 +19,10 @@ export default function User() {
         <Text style={styles.subTxt} >@rm551809</Text>
       </View>
 
-      <View style={styles.containerTxt} >
-        <Text style={styles.title} >Tecnologias</Text>
-        <Text style={styles.subTxt} >As tecnologias utilizadas neste projeto foram o React Native, Expo/Expo router e StyleSheet :)</Text>
+      <View style={styles.txtContainer} >
+        <Text style={styles.title} >Tech</Text>
+        <Text style={styles.subTxt} >As tecnologias utilizadas neste projeto foram o React Native, Expo/Expo router e StyleSheet</Text>
+        <Toast />
       </View>
 
     </View>
@@ -31,16 +34,16 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#222831"
   },
-  containerTxt: {
+  avatarContainer: {
+    flex: 1,
+    alignItems: "center",
+  },
+  txtContainer: {
     flex: 1,
     paddingLeft: 15,
     paddingRight: 15,
-    marginBottom: 50,
-    gap: 10
-  },
-  avatarContainer: {
-    flex: 1,
-    alignItems: "center"
+    gap: 20,
+    marginBottom: 150
   },
   title: {
     color: "#EEEEEE",
@@ -49,7 +52,7 @@ const styles = StyleSheet.create({
   },
   subTxt: {
     color: "#E9E9E9",
-    fontSize: 18,
+    fontSize: 16,
     textAlign: "justify"
   },
   avatar: {
