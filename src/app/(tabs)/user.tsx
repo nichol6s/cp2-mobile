@@ -21,7 +21,7 @@ export default function User() {
 
       <View style={styles.txtContainer} >
         <Text style={styles.title} >Tech</Text>
-        <Text style={styles.subTxt} >As tecnologias utilizadas neste projeto foram o React Native, Expo/Expo router e StyleSheet.</Text>
+        <Text style={styles.subTxt} >As tecnologias utilizadas neste projeto foram o React Native, Expo/Expo router, StyleSheet, useEffect, useState, useContext e AsyncStorage.</Text>
         <Toast />
       </View>
 
