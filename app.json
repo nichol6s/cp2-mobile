@@ -22,7 +22,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.nichol6s.desafiomobile1"
     },
     "web": {
       "favicon": "./assets/favicon.png"
@@ -30,6 +31,14 @@
     "plugins": [
       "expo-router",
       "expo-font"
-    ]
+    ],
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "6e08b803-f6fa-4644-b70c-e7aab982b3b2"
+      }
+    }
   }
 }
