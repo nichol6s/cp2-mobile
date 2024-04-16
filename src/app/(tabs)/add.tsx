@@ -100,7 +100,7 @@ export default function Add() {
       paddingTop: 15,
       borderBottomWidth: 1,
       borderBottomColor: "#76ABAE",
-      marginBottom: 0
+      marginBottom: 20
     },
     header: {
       marginTop: 32,

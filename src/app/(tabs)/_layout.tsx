@@ -18,7 +18,7 @@ export default function TabsLayout() {
 
     return (
         <Tabs screenOptions={{ headerShown: false }}>
-            <Tabs.Screen name="index" options={{
+            <Tabs.Screen name="home" options={{
                 headerTitle: "Home",
                 title: "Home",
                 tabBarIcon: ({ color }) => <MaterialIcons name="home" size={22} color={color} />,
