@@ -76,7 +76,7 @@ export default function Add() {
     },
     title: {
       fontSize: 22,
-      fontWeight: '700',
+      fontFamily: "Inter_700Bold",
       marginTop: 44,
       marginBottom: 24,
       color: "#EEEEEE"
@@ -111,7 +111,7 @@ export default function Add() {
     },
     headerTitle: {
       fontSize: 16,
-      fontWeight: '500',
-      color: "white"
+      color: "white",
+      fontFamily: "Inter_700Bold"
     }
   })

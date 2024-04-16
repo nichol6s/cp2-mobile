@@ -3,7 +3,6 @@ import React from 'react'
 
 import { useFonts, Inter_400Regular, Inter_700Bold } from "@expo-google-fonts/inter"
 import { Feather, MaterialIcons } from "@expo/vector-icons"
-import App from "../../../App"
 
 export default function TabsLayout() {
 
@@ -18,7 +17,7 @@ export default function TabsLayout() {
 
     return (
         <Tabs screenOptions={{ headerShown: false }}>
-            <Tabs.Screen name="home" options={{
+            <Tabs.Screen name="index" options={{
                 headerTitle: "Home",
                 title: "Home",
                 tabBarIcon: ({ color }) => <MaterialIcons name="home" size={22} color={color} />,

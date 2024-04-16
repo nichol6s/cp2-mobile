@@ -47,12 +47,13 @@ export const styles = StyleSheet.create({
     },
     name: {
       fontSize: 16,
-      fontWeight: '500',
+      fontFamily: "Inter_400Regular",
       marginBottom: 5,
       color: "#EEEEEE"
     },
     preco: {
       fontSize: 14,
       color: "#EEEEEE",
+      fontFamily: "Inter_400Regular"
     }
   });
