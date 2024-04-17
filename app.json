@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "desafio-mobile-1",
-    "slug": "desafio-mobile-1",
-    "scheme": "desafio-mobile-1",
+    "name": "cp-mobile-2",
+    "slug": "cp-mobile-1",
+    "scheme": "cp-mobile-2",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -10,7 +10,7 @@
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "contain",
-      "backgroundColor": "#ffffff"
+      "backgroundColor": "#31363F"
     },
     "assetBundlePatterns": [
       "**/*"
@@ -21,9 +21,9 @@
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#ffffff"
+        "backgroundColor": "#31363F"
       },
-      "package": "com.nichol6s.desafiomobile1"
+      "package": "com.nichol6s.cpmobile2"
     },
     "web": {
       "favicon": "./assets/favicon.png"
