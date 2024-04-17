@@ -77,10 +77,10 @@ export default function Add() {
       gap: 16
     },
     title: {
-      fontSize: 22,
+      fontSize: 24,
       fontFamily: "Inter_700Bold",
       marginTop: 44,
-      marginBottom: 24,
+      marginBottom: 5,
       color: "#EEEEEE"
     },
     txtInput: {
