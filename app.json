@@ -1,8 +1,8 @@
 {
   "expo": {
-    "name": "cp-mobile-2",
-    "slug": "cp-mobile-1",
-    "scheme": "cp-mobile-2",
+    "name": "cp2-mobile",
+    "slug": "cp2-mobile",
+    "scheme": "cp2-mobile",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -23,7 +23,7 @@
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#31363F"
       },
-      "package": "com.nichol6s.cpmobile2"
+      "package": "com.nichol6s.cp2mobile"
     },
     "web": {
       "favicon": "./assets/favicon.png"
