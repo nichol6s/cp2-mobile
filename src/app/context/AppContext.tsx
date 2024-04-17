@@ -4,12 +4,15 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 interface Item {
     nome: string;
     preco: string;
+    favorito: boolean
 }
-
 interface AppContextType {
     items: Item[];
+    favoriteItems: Item[]
     addItem: (nome: string, preco: string) => void;
     deleteItem: (index: number) => void;
+    addFavoriteItem: (index: number) => void;
+    deleteFavoriteItem: (index: number) => void;
 }
 
 const AppContext = createContext<AppContextType | undefined>(undefined);
@@ -24,6 +27,7 @@ export const useAppContext = () => {
 
 export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => {
     const [items, setItems] = useState<Item[]>([]);
+    const [favoriteItems, setFavoriteItems] = useState<Item[]>([])
 
     useEffect(() => {
         async function loadItems() {
@@ -40,7 +44,7 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
     }, []);
 
     const addItem = async (nome: string, preco: string) => {
-        const newItem: Item = { nome, preco };
+        const newItem: Item = { nome, preco, favorito: false };
         const updatedItems = [...items, newItem];
         setItems(updatedItems);
         await AsyncStorage.setItem('ITEMS', JSON.stringify(updatedItems));
@@ -53,8 +57,28 @@ export const AppProvider: React.FC<{ children: ReactNode }> = ({ children }) => 
         await AsyncStorage.setItem('ITEMS', JSON.stringify(updatedItems));
     };
 
+    const addFavoriteItem = async (index: number) => {
+        const updatedItems = [...items];
+        updatedItems[index].favorito = !updatedItems[index].favorito
+        setItems(updatedItems);
+
+        if (updatedItems[index].favorito){
+            setFavoriteItems([...favoriteItems, updatedItems[index]])
+        } else{
+            const filteredFavoriteItems = favoriteItems.filter((item, i) => i !== index);
+            setFavoriteItems(filteredFavoriteItems)
+        }
+
+        await AsyncStorage.setItem("ITEMS", JSON.stringify(updatedItems))
+    }
+
+    const deleteFavoriteItem = async (index: number) => {
+        const filteredFavoriteItems = favoriteItems.filter((item, i) => i !== index);
+        setFavoriteItems(filteredFavoriteItems)
+    }
+
     return (
-        <AppContext.Provider value={{ items, addItem, deleteItem }}>
+        <AppContext.Provider value={{ items, addItem, deleteItem, addFavoriteItem, deleteFavoriteItem, favoriteItems }}>
             {children}
         </AppContext.Provider>
     );

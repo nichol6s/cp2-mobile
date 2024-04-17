@@ -3,12 +3,13 @@ import { StyleSheet, Text, View, TextInput, ScrollView, Keyboard, Alert } from '
 import React from 'react'
 import { useState } from 'react'
 import { useAppContext } from '../context/AppContext'
+
 import { Button } from '../../components/Button'
 import Products from '../../components/Products'
 
 export default function Add() {
 
-    const { items, addItem, deleteItem } = useAppContext();
+    const { items, addItem, deleteItem, addFavoriteItem } = useAppContext();
     const [nomeItem, setNomeItem] = useState('')
     const [precoItem, setPrecoItem] = useState('')
 
@@ -21,7 +22,6 @@ export default function Add() {
       addItem(nomeItem, precoItem)
       setNomeItem('');
       setPrecoItem('');
-
       Keyboard.dismiss()
     }
 
@@ -58,7 +58,9 @@ export default function Add() {
               key={index}
               nomeItem={item.nome}
               precoItem={item.preco}
+              favorito={item.favorito || false}
               excluirItem={() => deleteItem(index)}
+              addFavoriteItem={() => addFavoriteItem(index)}
             />
           ))}
         </ScrollView>

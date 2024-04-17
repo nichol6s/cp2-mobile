@@ -1,26 +1,20 @@
 import React from 'react';
-import { View, StyleSheet, ToastAndroid } from 'react-native';
+import { ToastAndroid } from 'react-native';
 
 import { Button } from './Button';
 
-function showToast() {
-    ToastAndroid.showWithGravityAndOffset('🥳', ToastAndroid.SHORT, ToastAndroid.TOP, 25, 50);
+type Props={
+    message: string
 }
 
-function Toast() {
+function Toast({ message }: Props) {
+    const showToast = () => {
+        ToastAndroid.showWithGravityAndOffset(message, ToastAndroid.SHORT, ToastAndroid.TOP, 25, 50);
+    };
+
     return (
-        <View style={styles.container}>
-            <Button title="👀" onPress={showToast} />
-        </View>
+        <Button title="👀" onPress={showToast} />
     );
 }
 
-export { Toast }
-
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        justifyContent: 'center',
-        padding: 8,
-    },
-});
+export default Toast;

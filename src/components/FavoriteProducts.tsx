@@ -6,9 +6,10 @@ import { FontAwesome } from '@expo/vector-icons'
 interface FavoriteProductsProps {
     nomeItem: string;
     precoItem: string;
+    excluirFavorito: () => void;
 }
 
-export default function FavoriteProducts({ nomeItem, precoItem }: FavoriteProductsProps) {
+export default function FavoriteProducts({ nomeItem, precoItem, excluirFavorito }: FavoriteProductsProps) {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -19,7 +20,7 @@ export default function FavoriteProducts({ nomeItem, precoItem }: FavoriteProduc
                    <FontAwesome name="dollar" size={16} color="#76ABAE" /> {precoItem}
                 </Text>
             </View>
-            <TouchableOpacity>
+            <TouchableOpacity onPress={excluirFavorito}>
                 <FontAwesome 
                     name="bookmark"
                     size={22}

@@ -7,10 +7,12 @@ import React from 'react'
 interface ProductsProps{
   nomeItem: string;
   precoItem: string;
+  favorito: boolean
   excluirItem: ()=> void;
+  addFavoriteItem: ()=> void;
 }
 
-export default function Products({nomeItem, precoItem, excluirItem}: ProductsProps) {
+export default function Products({nomeItem, precoItem, favorito, addFavoriteItem, excluirItem}: ProductsProps) {
     return (
         <View style={styles.container}>
             <View style={styles.content}>
@@ -21,11 +23,17 @@ export default function Products({nomeItem, precoItem, excluirItem}: ProductsPro
                     <FontAwesome name="dollar" size={16} color="#76ABAE" /> {precoItem}
                 </Text>
             </View>
-
+            <TouchableOpacity onPress={addFavoriteItem}>
+              <FontAwesome
+                name={favorito ? "bookmark" : "bookmark-o"}
+                size={20}
+                color={favorito ? "yellow" : "yellow"}
+              />
+            </TouchableOpacity>
             <TouchableOpacity onPress={excluirItem}>
                 <Feather
                     name="trash"
-                    size={18}
+                    size={20}
                     color="#ff4949"
                 />
             </TouchableOpacity>
@@ -40,7 +48,8 @@ export const styles = StyleSheet.create({
       alignItems: 'center',
       backgroundColor: "#31363F",
       borderRadius: 7,
-      padding: 16
+      padding: 16,
+      gap: 20
     },
     content: {
       flex: 1,
