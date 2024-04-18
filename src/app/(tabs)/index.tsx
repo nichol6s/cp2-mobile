@@ -13,8 +13,8 @@ export default function Home() {
       <View style={styles.txtContainer} >
         <Text style={styles.txtTitle} >Seja bem-vindo!</Text>
         <Text style={styles.txt} >
-          Nosso app possui uma tela de funcionalidades principal, a Add. Nela você consegue
-          adicionar, remover e listar items de compra, vamos testar?
+          Nosso app possui uma tela de funcionalidades principal a Add. Nela você consegue
+          adicionar, remover, listar e favoritar items de compra, vamos testar?
         </Text>
       </View>
 
@@ -55,7 +55,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontFamily: "Inter_400Regular",
     textAlign: "center",
-    width: "85%",
+    width: "95%",
     color: "#EEEEEE"
   },
   pressable: {
