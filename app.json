@@ -16,7 +16,8 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.nichol6s.cp2mobile"
     },
     "android": {
       "adaptiveIcon": {
@@ -39,6 +40,12 @@
       "eas": {
         "projectId": "9b23a99c-65d2-41fe-b2ae-5d74724554f5"
       }
+    },
+    "runtimeVersion": {
+      "policy": "appVersion"
+    },
+    "updates": {
+      "url": "https://u.expo.dev/9b23a99c-65d2-41fe-b2ae-5d74724554f5"
     }
   }
 }
